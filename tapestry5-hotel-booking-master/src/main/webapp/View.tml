@@ -1,0 +1,42 @@
+<html t:type="layout" t:pageTitle="User details"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h2>User details</h2>
+	<div class="user-photo">
+		<p>
+			<img style="height: 125px" src="${context:/static}/${user.fotouml}" alt="Tapestry" id="tapestry" />
+		</p>
+		<p>
+			<a href="#" t:type="pagelink" t:page="uploadfoto">
+				Upload Foto
+			</a>
+		</p>
+	</div>
+	<div class="user-details" t:type="beandisplay" t:object="user" t:exclude="id" t:include="username,fullname,email">
+		<!--
+		<p:stars>
+			<t:hotelclass stars="hotel?.stars" />
+		</p:stars>
+		-->
+	</div>
+	
+	<form t:type="form" class="full-form" t:id="startBookingForm" t:context="user">
+   		
+		<div class="form-submit">
+			<!--<input type="submit" class="btn-active" value="Book this Hotel" />--> 
+			<a href="#" t:type="pagelink" t:page="search">Back to search</a>
+		</div>
+
+   	</form>
+
+	<p:sidebar>
+        <p>
+        	Tapestry has an existing set of components that will help you to quickly
+        	handle common stuff. Displaying Javabean properties, generate form from Javabean, 
+        	display tabular datas... All of these to get a clean and efficient template's code.
+        </p>
+	</p:sidebar>
+
+</html>

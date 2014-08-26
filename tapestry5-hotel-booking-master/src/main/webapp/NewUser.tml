@@ -1,0 +1,92 @@
+<html t:type="layout" title="Tapestry5-hotel-booking Sign In"
+      t:pageTitle="Register"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+
+	<!--
+	<t:form>
+	    <t:errors/>
+	    <input t:type="upload" t:id="file" t:value="file" validate="required"/>
+	    <br/>
+	    <input type="submit" value="Upload"/>
+	</t:form>
+	-->
+	<!--<t:beaneditform object="user"/>-->
+	<form class="full-form" t:id="registerForm" >
+		<t:errors/>
+		<table>
+			<tr>
+				<th>
+					<label t:type="label" t:for="username">Nombre de Usuario:</label>
+				</th>
+				<td>
+					<input t:type="textfield" t:id="username"/>
+				</td>	
+			</tr>
+			<tr>
+				<th>
+					<label t:type="label" t:for="fullname">Nombre Completo:</label>
+				</th>
+				<td>
+					<input t:type="textfield" t:id="fullname"/>
+				</td>	
+			</tr>
+			<tr>
+				<th>
+					<label t:type="label" t:for="email">Correo Electrónico:</label>
+				</th>
+				<td>
+					<input t:type="textfield" t:id="email"/>
+				</td>	
+			</tr>
+			<tr>
+				<th>
+					<label t:type="label" t:for="password">Contraseña:</label>
+				</th>
+				<td>
+					<input t:type="passwordField" t:id="password"/>
+				</td>	
+			</tr>
+			<tr>
+				<th>
+					<label t:type="label" t:for="verifyPassword">Verificar Contraseña:</label>
+				</th>
+				<td>
+					<input t:type="passwordField" t:id="verifyPassword"/>
+				</td>	
+			</tr>
+			<tr>
+				<th>
+					<label t:type="label" t:for="track">Seleccione un Track:</label>
+				</th>
+				<td>
+					<t:select t:id="track"/>
+				</td>
+			</tr>
+			<!--
+			<tr>
+    			<th><label t:type="label" t:for="fcaptcha">Enter text displayed below</label></th>
+    			<td>
+    				<t:kaptchafield image="kaptcha" t:id="fcaptcha" />
+    			</td>  			
+    		</tr>
+    		<tr>
+    			<th></th>
+    			<td>
+    				<t:kaptchaimage t:id="kaptcha" style="float:left;"/>
+    			</td>  			
+    		</tr>
+    		-->
+		</table>
+    	
+		<div class="form-submit">
+			<input type="submit" value="Register" />
+		</div>
+			
+		<div class="member">
+			Already a member ? <t:pagelink page="SignIn">Login now!</t:pagelink>
+		</div>
+		
+	</form>
+
+</html>

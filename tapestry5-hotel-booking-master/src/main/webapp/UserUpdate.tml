@@ -1,0 +1,23 @@
+<html t:type="layout" t:pageTitle="User details"
+      xmlns:t="http://tapestry.apache.org/schema/tapestry_5_1_0.xsd"
+      xmlns:p="tapestry:parameter">
+        <!-- Most of the page content, including <head>, <body>, etc. tags, comes from Layout.tml -->
+
+	<h2>User details</h2>
+	<div class="user-photo">
+		<p>
+			<img style="height: 125px" src="${context:/static}/${user.fotouml}" alt="Tapestry" id="tapestry" />
+		</p>
+	</div>
+	
+	<div class="user-details" t:id="userForm" t:type="beaneditform" t:object="user" t:exclude="id" t:include="username,fullname,email"></div>	
+	
+	<p:sidebar>
+        <p>
+        	Tapestry has an existing set of components that will help you to quickly
+        	handle common stuff. Displaying Javabean properties, generate form from Javabean, 
+        	display tabular datas... All of these to get a clean and efficient template's code.
+        </p>
+	</p:sidebar>
+
+</html>
